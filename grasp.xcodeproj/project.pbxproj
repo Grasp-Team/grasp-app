@@ -7,21 +7,33 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2624A5BCBCD6B4E9E637C8DC /* Pods_grasp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACFDBFA5452715C6BAE01984 /* Pods_grasp.framework */; };
 		5FBB0E561F9269FC0077A877 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FBB0E551F9269FC0077A877 /* AppDelegate.swift */; };
-		5FBB0E581F9269FC0077A877 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FBB0E571F9269FC0077A877 /* ViewController.swift */; };
 		5FBB0E5B1F9269FC0077A877 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5FBB0E591F9269FC0077A877 /* Main.storyboard */; };
 		5FBB0E5D1F9269FC0077A877 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5FBB0E5C1F9269FC0077A877 /* Assets.xcassets */; };
 		5FBB0E601F9269FC0077A877 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5FBB0E5E1F9269FC0077A877 /* LaunchScreen.storyboard */; };
+		5FBB0E681F926ECE0077A877 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FBB0E671F926ECE0077A877 /* LoginViewController.swift */; };
+		5FBB0E6A1F926FFF0077A877 /* TutorsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FBB0E691F926FFF0077A877 /* TutorsViewController.swift */; };
+		5FBB0E6C1F92714D0077A877 /* TutorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FBB0E6B1F92714D0077A877 /* TutorCell.swift */; };
+		5FFE5F421F92949700BCB2B5 /* TutorProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FFE5F411F92949700BCB2B5 /* TutorProfileViewController.swift */; };
+		5FFE5F441F929F1300BCB2B5 /* UserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FFE5F431F929F1300BCB2B5 /* UserProfileViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		298F8229240B3F56915101CF /* Pods-grasp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-grasp.release.xcconfig"; path = "Pods/Target Support Files/Pods-grasp/Pods-grasp.release.xcconfig"; sourceTree = "<group>"; };
 		5FBB0E521F9269FC0077A877 /* grasp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = grasp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5FBB0E551F9269FC0077A877 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		5FBB0E571F9269FC0077A877 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		5FBB0E5A1F9269FC0077A877 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5FBB0E5C1F9269FC0077A877 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5FBB0E5F1F9269FC0077A877 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5FBB0E611F9269FC0077A877 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5FBB0E671F926ECE0077A877 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		5FBB0E691F926FFF0077A877 /* TutorsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorsViewController.swift; sourceTree = "<group>"; };
+		5FBB0E6B1F92714D0077A877 /* TutorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorCell.swift; sourceTree = "<group>"; };
+		5FFE5F411F92949700BCB2B5 /* TutorProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorProfileViewController.swift; sourceTree = "<group>"; };
+		5FFE5F431F929F1300BCB2B5 /* UserProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileViewController.swift; sourceTree = "<group>"; };
+		617FD0DA12F0D025378EF702 /* Pods-grasp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-grasp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-grasp/Pods-grasp.debug.xcconfig"; sourceTree = "<group>"; };
+		ACFDBFA5452715C6BAE01984 /* Pods_grasp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_grasp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +41,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2624A5BCBCD6B4E9E637C8DC /* Pods_grasp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +53,8 @@
 			children = (
 				5FBB0E541F9269FC0077A877 /* grasp */,
 				5FBB0E531F9269FC0077A877 /* Products */,
+				ABBE0FA434871B0371F21D28 /* Pods */,
+				DC1F87589B9565E6047E4D9F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -55,13 +70,34 @@
 			isa = PBXGroup;
 			children = (
 				5FBB0E551F9269FC0077A877 /* AppDelegate.swift */,
-				5FBB0E571F9269FC0077A877 /* ViewController.swift */,
 				5FBB0E591F9269FC0077A877 /* Main.storyboard */,
 				5FBB0E5C1F9269FC0077A877 /* Assets.xcassets */,
 				5FBB0E5E1F9269FC0077A877 /* LaunchScreen.storyboard */,
 				5FBB0E611F9269FC0077A877 /* Info.plist */,
+				5FBB0E671F926ECE0077A877 /* LoginViewController.swift */,
+				5FBB0E691F926FFF0077A877 /* TutorsViewController.swift */,
+				5FBB0E6B1F92714D0077A877 /* TutorCell.swift */,
+				5FFE5F411F92949700BCB2B5 /* TutorProfileViewController.swift */,
+				5FFE5F431F929F1300BCB2B5 /* UserProfileViewController.swift */,
 			);
 			path = grasp;
+			sourceTree = "<group>";
+		};
+		ABBE0FA434871B0371F21D28 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				617FD0DA12F0D025378EF702 /* Pods-grasp.debug.xcconfig */,
+				298F8229240B3F56915101CF /* Pods-grasp.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		DC1F87589B9565E6047E4D9F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				ACFDBFA5452715C6BAE01984 /* Pods_grasp.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +107,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5FBB0E641F9269FC0077A877 /* Build configuration list for PBXNativeTarget "grasp" */;
 			buildPhases = (
+				1A5EC7437F421FFFCF1ECCAF /* [CP] Check Pods Manifest.lock */,
 				5FBB0E4E1F9269FC0077A877 /* Sources */,
 				5FBB0E4F1F9269FC0077A877 /* Frameworks */,
 				5FBB0E501F9269FC0077A877 /* Resources */,
+				8E7EDF7F4FF55E0FEB3946FC /* [CP] Embed Pods Frameworks */,
+				E5BB2F00E9DA212C074D372C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -131,12 +170,76 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1A5EC7437F421FFFCF1ECCAF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-grasp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8E7EDF7F4FF55E0FEB3946FC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-grasp/Pods-grasp-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKShareKit/FBSDKShareKit.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKShareKit.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-grasp/Pods-grasp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E5BB2F00E9DA212C074D372C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-grasp/Pods-grasp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		5FBB0E4E1F9269FC0077A877 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5FBB0E581F9269FC0077A877 /* ViewController.swift in Sources */,
+				5FBB0E6C1F92714D0077A877 /* TutorCell.swift in Sources */,
+				5FFE5F441F929F1300BCB2B5 /* UserProfileViewController.swift in Sources */,
+				5FBB0E681F926ECE0077A877 /* LoginViewController.swift in Sources */,
+				5FBB0E6A1F926FFF0077A877 /* TutorsViewController.swift in Sources */,
+				5FFE5F421F92949700BCB2B5 /* TutorProfileViewController.swift in Sources */,
 				5FBB0E561F9269FC0077A877 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -272,6 +375,7 @@
 		};
 		5FBB0E651F9269FC0077A877 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 617FD0DA12F0D025378EF702 /* Pods-grasp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -287,6 +391,7 @@
 		};
 		5FBB0E661F9269FC0077A877 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 298F8229240B3F56915101CF /* Pods-grasp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
