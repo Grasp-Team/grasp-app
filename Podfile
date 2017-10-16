@@ -7,6 +7,7 @@ target 'grasp' do
 	pod 'FBSDKCoreKit'
 	pod 'FBSDKLoginKit'
 	pod 'FBSDKShareKit'
+	pod 'Alamofire', '~> 4.5'
 
   # Pods for grasp
 

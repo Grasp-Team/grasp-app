@@ -12,12 +12,14 @@ class UserProfileViewController: UIViewController {
     
     @IBOutlet weak var userProfileImageView: UIImageView!
     @IBOutlet weak var nameTextField: UITextField!
+    @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var tutorSwitch: UISwitch!
     @IBOutlet weak var programTextField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         nameTextField.text = "Jon Snow"
+        emailTextField.text = "jsnow@uwaterloo.ca"
         tutorSwitch.isOn = false
         programTextField.text = "Mechanical Engineering"
         

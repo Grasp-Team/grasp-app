@@ -7,21 +7,38 @@
 //
 
 import UIKit
+import Alamofire
 
 class TutorsViewController: UIViewController {
 
     @IBOutlet weak var tutorsTableView: UITableView!
+    var tutors = [Tutor]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tutorsTableView.delegate = self
         self.tutorsTableView.dataSource = self
+        loadData()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
     
+    func loadData() {
+        APIManager.sharedInstance.retrieveTutors { tutors in
+            self.tutors.removeAll()
+            self.tutors = tutors
+            self.tutorsTableView.reloadData()
+        }
+    }
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "showTutor") {
+            let destVC = segue.destination as! TutorProfileViewController
+            destVC.tutor = sender as? Tutor
+        }
+    }
 }
 
 extension TutorsViewController: UITableViewDelegate, UITableViewDataSource {
@@ -30,30 +47,24 @@ extension TutorsViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return tutors.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell : TutorCell = tutorsTableView.dequeueReusableCell(withIdentifier: "tutorCell", for: indexPath) as! TutorCell
+        let tutor : Tutor = tutors[indexPath.row]
         
-        if (indexPath.row % 2 == 0) {
-            cell.nameLabel.text = "Joe Smith"
-            cell.profileImageView.image = UIImage(named: "default_user_icon")
-        } else {
-            cell.nameLabel.text = "Sally Jane"
-            cell.profileImageView.image = UIImage(named: "default_user_icon")
-        }
+        cell.nameLabel.text = tutor.firstName + " " + tutor.lastName
+        cell.programLabel.text = tutor.program + " (Year " + String(tutor.year) + ")"
         
         return cell
         
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-        self.performSegue(withIdentifier: "showTutor", sender: nil)
-        
+        let tutor = tutors[indexPath.row]
+        self.performSegue(withIdentifier: "showTutor", sender: tutor)
     }
-    
     
 }
