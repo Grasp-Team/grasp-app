@@ -11,13 +11,19 @@
 		5F3C5BC61F9420F0004E7114 /* UserCreationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F3C5BC51F9420F0004E7114 /* UserCreationViewController.swift */; };
 		5F3C5BC81F9423ED004E7114 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F3C5BC71F9423ED004E7114 /* APIManager.swift */; };
 		5F3C5BCA1F94251F004E7114 /* Tutor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F3C5BC91F94251F004E7114 /* Tutor.swift */; };
+		5F7EE4311FBA47DF00FCD1C7 /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F7EE4301FBA47DF00FCD1C7 /* RoundButton.swift */; };
+		5F7EE4331FBA4A7600FCD1C7 /* RegistrationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F7EE4321FBA4A7600FCD1C7 /* RegistrationController.swift */; };
+		5F7EE4351FBA5DB300FCD1C7 /* UserCompletionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F7EE4341FBA5DB300FCD1C7 /* UserCompletionController.swift */; };
 		5FBB0E561F9269FC0077A877 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FBB0E551F9269FC0077A877 /* AppDelegate.swift */; };
 		5FBB0E5B1F9269FC0077A877 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5FBB0E591F9269FC0077A877 /* Main.storyboard */; };
 		5FBB0E5D1F9269FC0077A877 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5FBB0E5C1F9269FC0077A877 /* Assets.xcassets */; };
 		5FBB0E601F9269FC0077A877 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5FBB0E5E1F9269FC0077A877 /* LaunchScreen.storyboard */; };
-		5FBB0E681F926ECE0077A877 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FBB0E671F926ECE0077A877 /* LoginViewController.swift */; };
+		5FBB0E681F926ECE0077A877 /* InitialScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FBB0E671F926ECE0077A877 /* InitialScreenViewController.swift */; };
 		5FBB0E6A1F926FFF0077A877 /* TutorsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FBB0E691F926FFF0077A877 /* TutorsViewController.swift */; };
 		5FBB0E6C1F92714D0077A877 /* TutorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FBB0E6B1F92714D0077A877 /* TutorCell.swift */; };
+		5FE4D6811FBA94DA005D3ECA /* KeyChainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FE4D6801FBA94DA005D3ECA /* KeyChainManager.swift */; };
+		5FE4D6831FBA9975005D3ECA /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FE4D6821FBA9975005D3ECA /* User.swift */; };
+		5FE4D6851FBAA1EE005D3ECA /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FE4D6841FBAA1EE005D3ECA /* MainTabBarController.swift */; };
 		5FFE5F421F92949700BCB2B5 /* TutorProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FFE5F411F92949700BCB2B5 /* TutorProfileViewController.swift */; };
 		5FFE5F441F929F1300BCB2B5 /* UserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FFE5F431F929F1300BCB2B5 /* UserProfileViewController.swift */; };
 /* End PBXBuildFile section */
@@ -27,15 +33,21 @@
 		5F3C5BC51F9420F0004E7114 /* UserCreationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCreationViewController.swift; sourceTree = "<group>"; };
 		5F3C5BC71F9423ED004E7114 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		5F3C5BC91F94251F004E7114 /* Tutor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tutor.swift; sourceTree = "<group>"; };
+		5F7EE4301FBA47DF00FCD1C7 /* RoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
+		5F7EE4321FBA4A7600FCD1C7 /* RegistrationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationController.swift; sourceTree = "<group>"; };
+		5F7EE4341FBA5DB300FCD1C7 /* UserCompletionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCompletionController.swift; sourceTree = "<group>"; };
 		5FBB0E521F9269FC0077A877 /* grasp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = grasp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5FBB0E551F9269FC0077A877 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5FBB0E5A1F9269FC0077A877 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5FBB0E5C1F9269FC0077A877 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5FBB0E5F1F9269FC0077A877 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5FBB0E611F9269FC0077A877 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5FBB0E671F926ECE0077A877 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		5FBB0E671F926ECE0077A877 /* InitialScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialScreenViewController.swift; sourceTree = "<group>"; };
 		5FBB0E691F926FFF0077A877 /* TutorsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorsViewController.swift; sourceTree = "<group>"; };
 		5FBB0E6B1F92714D0077A877 /* TutorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorCell.swift; sourceTree = "<group>"; };
+		5FE4D6801FBA94DA005D3ECA /* KeyChainManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyChainManager.swift; sourceTree = "<group>"; };
+		5FE4D6821FBA9975005D3ECA /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		5FE4D6841FBAA1EE005D3ECA /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		5FFE5F411F92949700BCB2B5 /* TutorProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorProfileViewController.swift; sourceTree = "<group>"; };
 		5FFE5F431F929F1300BCB2B5 /* UserProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileViewController.swift; sourceTree = "<group>"; };
 		617FD0DA12F0D025378EF702 /* Pods-grasp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-grasp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-grasp/Pods-grasp.debug.xcconfig"; sourceTree = "<group>"; };
@@ -80,7 +92,7 @@
 				5FBB0E5C1F9269FC0077A877 /* Assets.xcassets */,
 				5FBB0E5E1F9269FC0077A877 /* LaunchScreen.storyboard */,
 				5FBB0E611F9269FC0077A877 /* Info.plist */,
-				5FBB0E671F926ECE0077A877 /* LoginViewController.swift */,
+				5FBB0E671F926ECE0077A877 /* InitialScreenViewController.swift */,
 				5FBB0E691F926FFF0077A877 /* TutorsViewController.swift */,
 				5FBB0E6B1F92714D0077A877 /* TutorCell.swift */,
 				5FFE5F411F92949700BCB2B5 /* TutorProfileViewController.swift */,
@@ -88,6 +100,12 @@
 				5F3C5BC51F9420F0004E7114 /* UserCreationViewController.swift */,
 				5F3C5BC71F9423ED004E7114 /* APIManager.swift */,
 				5F3C5BC91F94251F004E7114 /* Tutor.swift */,
+				5F7EE4301FBA47DF00FCD1C7 /* RoundButton.swift */,
+				5F7EE4321FBA4A7600FCD1C7 /* RegistrationController.swift */,
+				5F7EE4341FBA5DB300FCD1C7 /* UserCompletionController.swift */,
+				5FE4D6801FBA94DA005D3ECA /* KeyChainManager.swift */,
+				5FE4D6821FBA9975005D3ECA /* User.swift */,
+				5FE4D6841FBAA1EE005D3ECA /* MainTabBarController.swift */,
 			);
 			path = grasp;
 			sourceTree = "<group>";
@@ -206,18 +224,14 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-grasp/Pods-grasp-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
-				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
-				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
-				"${BUILT_PRODUCTS_DIR}/FBSDKShareKit/FBSDKShareKit.framework",
+				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/KeychainSwift/KeychainSwift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKShareKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KeychainSwift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -248,10 +262,16 @@
 			files = (
 				5F3C5BC81F9423ED004E7114 /* APIManager.swift in Sources */,
 				5F3C5BCA1F94251F004E7114 /* Tutor.swift in Sources */,
+				5FE4D6851FBAA1EE005D3ECA /* MainTabBarController.swift in Sources */,
+				5F7EE4351FBA5DB300FCD1C7 /* UserCompletionController.swift in Sources */,
 				5FBB0E6C1F92714D0077A877 /* TutorCell.swift in Sources */,
+				5FE4D6811FBA94DA005D3ECA /* KeyChainManager.swift in Sources */,
 				5FFE5F441F929F1300BCB2B5 /* UserProfileViewController.swift in Sources */,
-				5FBB0E681F926ECE0077A877 /* LoginViewController.swift in Sources */,
+				5FE4D6831FBA9975005D3ECA /* User.swift in Sources */,
+				5FBB0E681F926ECE0077A877 /* InitialScreenViewController.swift in Sources */,
 				5FBB0E6A1F926FFF0077A877 /* TutorsViewController.swift in Sources */,
+				5F7EE4331FBA4A7600FCD1C7 /* RegistrationController.swift in Sources */,
+				5F7EE4311FBA47DF00FCD1C7 /* RoundButton.swift in Sources */,
 				5FFE5F421F92949700BCB2B5 /* TutorProfileViewController.swift in Sources */,
 				5F3C5BC61F9420F0004E7114 /* UserCreationViewController.swift in Sources */,
 				5FBB0E561F9269FC0077A877 /* AppDelegate.swift in Sources */,

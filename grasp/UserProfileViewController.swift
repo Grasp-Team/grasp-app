@@ -16,6 +16,8 @@ class UserProfileViewController: UIViewController {
     @IBOutlet weak var tutorSwitch: UISwitch!
     @IBOutlet weak var programTextField: UITextField!
     
+    let appDelegate = UIApplication.shared.delegate as! AppDelegate
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         nameTextField.text = "Jon Snow"
@@ -36,6 +38,11 @@ class UserProfileViewController: UIViewController {
     
     @objc func dismissKeyboard() {
         view.endEditing(true)
+    }
+    
+    @IBAction func logout (_ sender: UIButton) {
+        KeyChainManager.sharedInstance.deleteValueFor("token")
+        appDelegate.openInitialScreen()
     }
     
 }

@@ -4,9 +4,8 @@
 target 'grasp' do
   # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
   use_frameworks!
-	pod 'FBSDKCoreKit'
-	pod 'FBSDKLoginKit'
-	pod 'FBSDKShareKit'
+	pod 'IQKeyboardManagerSwift'
+	pod 'KeychainSwift', '~> 10.0'
 	pod 'Alamofire', '~> 4.5'
 
   # Pods for grasp

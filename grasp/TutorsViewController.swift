@@ -13,16 +13,27 @@ class TutorsViewController: UIViewController {
 
     @IBOutlet weak var tutorsTableView: UITableView!
     var tutors = [Tutor]()
+    let refreshControl = UIRefreshControl()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tutorsTableView.delegate = self
         self.tutorsTableView.dataSource = self
+        self.refreshControl.tintColor = UIColor.clear
+        self.refreshControl.backgroundColor = UIColor.clear
+        self.refreshControl.addTarget(self, action: #selector(refresh(sender:)), for: UIControlEvents.valueChanged)
+        self.tutorsTableView.addSubview(refreshControl)
         loadData()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+    }
+    
+    @objc func refresh(sender: AnyObject) {
+        loadData()
+        self.tutorsTableView.reloadData()
+        self.refreshControl.endRefreshing()
     }
     
     func loadData() {
