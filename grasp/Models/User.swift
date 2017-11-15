@@ -10,6 +10,9 @@ import Foundation
 
 class User {
     static let sharedInstance = User()
+    
+    var login_email : String
+    
     var id : String
     var first_name : String
     var last_name : String
@@ -32,6 +35,8 @@ class User {
         userType = ""
         userRole = ""
         tutors = NSArray()
+        
+        login_email = ""
     }
     
     func updateUser(user_data : [String: Any]) {

@@ -37,10 +37,13 @@ class TutorsViewController: UIViewController {
     }
     
     func loadData() {
-        APIManager.sharedInstance.retrieveTutors { tutors in
-            self.tutors.removeAll()
-            self.tutors = tutors
-            self.tutorsTableView.reloadData()
+        APIManager.sharedInstance.getUserInfoFrom(email_address: User.sharedInstance.login_email) { user_data in
+            User.sharedInstance.updateUser(user_data: user_data)
+            APIManager.sharedInstance.retrieveTutors { tutors in
+                self.tutors.removeAll()
+                self.tutors = tutors
+                self.tutorsTableView.reloadData()
+            }
         }
     }
 

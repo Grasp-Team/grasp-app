@@ -66,6 +66,48 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5F25D7A31FBC0AB100A77415 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				5FBB0E671F926ECE0077A877 /* InitialScreenViewController.swift */,
+				5FBB0E691F926FFF0077A877 /* TutorsViewController.swift */,
+				5FFE5F411F92949700BCB2B5 /* TutorProfileViewController.swift */,
+				5FFE5F431F929F1300BCB2B5 /* UserProfileViewController.swift */,
+				5F3C5BC51F9420F0004E7114 /* UserCreationViewController.swift */,
+				5F7EE4321FBA4A7600FCD1C7 /* RegistrationController.swift */,
+				5F7EE4341FBA5DB300FCD1C7 /* UserCompletionController.swift */,
+				5FE4D6841FBAA1EE005D3ECA /* MainTabBarController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		5F25D7A41FBC0ACF00A77415 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5FBB0E6B1F92714D0077A877 /* TutorCell.swift */,
+				5F7EE4301FBA47DF00FCD1C7 /* RoundButton.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		5F25D7A51FBC0B0600A77415 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5F3C5BC91F94251F004E7114 /* Tutor.swift */,
+				5FE4D6821FBA9975005D3ECA /* User.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		5F25D7A61FBC0B1300A77415 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				5F3C5BC71F9423ED004E7114 /* APIManager.swift */,
+				5FE4D6801FBA94DA005D3ECA /* KeyChainManager.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		5FBB0E491F9269FC0077A877 = {
 			isa = PBXGroup;
 			children = (
@@ -87,25 +129,15 @@
 		5FBB0E541F9269FC0077A877 /* grasp */ = {
 			isa = PBXGroup;
 			children = (
+				5F25D7A61FBC0B1300A77415 /* Helpers */,
+				5F25D7A51FBC0B0600A77415 /* Models */,
+				5F25D7A41FBC0ACF00A77415 /* Views */,
+				5F25D7A31FBC0AB100A77415 /* ViewControllers */,
 				5FBB0E551F9269FC0077A877 /* AppDelegate.swift */,
 				5FBB0E591F9269FC0077A877 /* Main.storyboard */,
 				5FBB0E5C1F9269FC0077A877 /* Assets.xcassets */,
 				5FBB0E5E1F9269FC0077A877 /* LaunchScreen.storyboard */,
 				5FBB0E611F9269FC0077A877 /* Info.plist */,
-				5FBB0E671F926ECE0077A877 /* InitialScreenViewController.swift */,
-				5FBB0E691F926FFF0077A877 /* TutorsViewController.swift */,
-				5FBB0E6B1F92714D0077A877 /* TutorCell.swift */,
-				5FFE5F411F92949700BCB2B5 /* TutorProfileViewController.swift */,
-				5FFE5F431F929F1300BCB2B5 /* UserProfileViewController.swift */,
-				5F3C5BC51F9420F0004E7114 /* UserCreationViewController.swift */,
-				5F3C5BC71F9423ED004E7114 /* APIManager.swift */,
-				5F3C5BC91F94251F004E7114 /* Tutor.swift */,
-				5F7EE4301FBA47DF00FCD1C7 /* RoundButton.swift */,
-				5F7EE4321FBA4A7600FCD1C7 /* RegistrationController.swift */,
-				5F7EE4341FBA5DB300FCD1C7 /* UserCompletionController.swift */,
-				5FE4D6801FBA94DA005D3ECA /* KeyChainManager.swift */,
-				5FE4D6821FBA9975005D3ECA /* User.swift */,
-				5FE4D6841FBAA1EE005D3ECA /* MainTabBarController.swift */,
 			);
 			path = grasp;
 			sourceTree = "<group>";

@@ -80,6 +80,7 @@ class UserCompletionController: UIViewController {
                         token in
                         KeyChainManager.sharedInstance.storeValueFor("token", value: token)
                         User.sharedInstance.updateUser(user_data: user_data)
+                        User.sharedInstance.login_email = email_address
                         self.appDelegate.openMainFeed()
                     }
                 }

@@ -10,20 +10,17 @@ import UIKit
 
 class UserProfileViewController: UIViewController {
     
-    @IBOutlet weak var userProfileImageView: UIImageView!
-    @IBOutlet weak var nameTextField: UITextField!
+    @IBOutlet weak var firstNameTextField: UITextField!
+    @IBOutlet weak var lastNameTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var tutorSwitch: UISwitch!
     @IBOutlet weak var programTextField: UITextField!
+    @IBOutlet weak var yearSegmentedControl : UISegmentedControl!
     
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        nameTextField.text = "Jon Snow"
-        emailTextField.text = "jsnow@uwaterloo.ca"
-        tutorSwitch.isOn = false
-        programTextField.text = "Mechanical Engineering"
         
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(
             target: self,
@@ -31,9 +28,22 @@ class UserProfileViewController: UIViewController {
         
         view.addGestureRecognizer(tap)
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        initProfileInfo()
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+    }
+    
+    func initProfileInfo() {
+        self.firstNameTextField.text = User.sharedInstance.first_name
+        self.lastNameTextField.text = User.sharedInstance.last_name
+        self.emailTextField.text = User.sharedInstance.email
+        self.programTextField.text = User.sharedInstance.program
+        self.yearSegmentedControl.selectedSegmentIndex = User.sharedInstance.year-1
     }
     
     @objc func dismissKeyboard() {

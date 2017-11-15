@@ -61,13 +61,35 @@ class APIManager {
                 if let token = json["apiToken"] as? String {
                     success(token)
                 }
+            } else {
+                success("")
             }
         }
     }
     
+    func getUserInfoFrom(email_address: String, success: @escaping (_ user_data: [String: Any]) -> Void) {
+        
+        let requestURL: String = baseURL + "/user/email/" + email_address
+        let apiToken = KeyChainManager.sharedInstance.retrieveValueFor("token")
+        let headers: HTTPHeaders = [
+            "API-TOKEN": apiToken,
+            "Content-Type": "application/json"
+        ]
+        
+        Alamofire.request(requestURL, headers: headers).responseJSON { response in
+            if let json = response.result.value as? [String: Any] {
+                success(json)
+            } else {
+                success([String : Any]())
+            }
+        }
+        
+    }
+    
     func retrieveTutors (success: @escaping (_ tutors: [Tutor]) -> Void) {
         
-        let requestURL: String = baseURL + "/tutor"
+        let userId = User.sharedInstance.id
+        let requestURL: String = baseURL + "/search/" + userId
         let apiToken = KeyChainManager.sharedInstance.retrieveValueFor("token")
         let headers: HTTPHeaders = [
             "API-TOKEN": apiToken,

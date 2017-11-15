@@ -15,8 +15,6 @@ class RegistrationController: UIViewController {
     @IBOutlet weak var errorEmailLabel: UILabel!
     @IBOutlet weak var continueButton: UIButton!
     
-    //continueRegistration
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.errorEmailLabel.isHidden = true
