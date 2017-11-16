@@ -26,6 +26,9 @@ class InitialScreenViewController: UIViewController {
     }
 
     @IBAction func login() {
+        
+        //show loader
+        
         let email_address = emailAddressTextField.text ?? ""
         let password = passwordTextField.text ?? ""
         

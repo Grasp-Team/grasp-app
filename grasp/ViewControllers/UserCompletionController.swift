@@ -50,14 +50,6 @@ class UserCompletionController: UIViewController {
         let program = programTextField.text ?? ""
         let year = yearSegmentedControl.selectedSegmentIndex + 1
         
-//        private String email;
-//        private String password;
-//        private String firstName;
-//        private String lastName;
-//        private int year;
-//        private String program;
-//        private String faculty;
-        
         let user_info : [String: Any] = [
             "email" : email_address,
             "password" : password,

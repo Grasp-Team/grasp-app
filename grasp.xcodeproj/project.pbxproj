@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		2624A5BCBCD6B4E9E637C8DC /* Pods_grasp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACFDBFA5452715C6BAE01984 /* Pods_grasp.framework */; };
+		5F25D7A81FBCCC8E00A77415 /* TutorSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F25D7A71FBCCC8E00A77415 /* TutorSearchViewController.swift */; };
+		5F25D7AA1FBCD60C00A77415 /* TutorResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F25D7A91FBCD60C00A77415 /* TutorResultCell.swift */; };
+		5F25D7AC1FBCF52800A77415 /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F25D7AB1FBCF52800A77415 /* Course.swift */; };
+		5F25D7AE1FBD20A100A77415 /* CourseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F25D7AD1FBD20A100A77415 /* CourseCell.swift */; };
+		5F25D7B01FBD502B00A77415 /* TutorCourseSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F25D7AF1FBD502B00A77415 /* TutorCourseSelectionViewController.swift */; };
+		5F25D7B21FBD5D6600A77415 /* CourseTutorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F25D7B11FBD5D6600A77415 /* CourseTutorCell.swift */; };
 		5F3C5BC61F9420F0004E7114 /* UserCreationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F3C5BC51F9420F0004E7114 /* UserCreationViewController.swift */; };
 		5F3C5BC81F9423ED004E7114 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F3C5BC71F9423ED004E7114 /* APIManager.swift */; };
 		5F3C5BCA1F94251F004E7114 /* Tutor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F3C5BC91F94251F004E7114 /* Tutor.swift */; };
@@ -30,13 +36,19 @@
 
 /* Begin PBXFileReference section */
 		298F8229240B3F56915101CF /* Pods-grasp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-grasp.release.xcconfig"; path = "Pods/Target Support Files/Pods-grasp/Pods-grasp.release.xcconfig"; sourceTree = "<group>"; };
+		5F25D7A71FBCCC8E00A77415 /* TutorSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorSearchViewController.swift; sourceTree = "<group>"; };
+		5F25D7A91FBCD60C00A77415 /* TutorResultCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorResultCell.swift; sourceTree = "<group>"; };
+		5F25D7AB1FBCF52800A77415 /* Course.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; };
+		5F25D7AD1FBD20A100A77415 /* CourseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseCell.swift; sourceTree = "<group>"; };
+		5F25D7AF1FBD502B00A77415 /* TutorCourseSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorCourseSelectionViewController.swift; sourceTree = "<group>"; };
+		5F25D7B11FBD5D6600A77415 /* CourseTutorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseTutorCell.swift; sourceTree = "<group>"; };
 		5F3C5BC51F9420F0004E7114 /* UserCreationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCreationViewController.swift; sourceTree = "<group>"; };
 		5F3C5BC71F9423ED004E7114 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		5F3C5BC91F94251F004E7114 /* Tutor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tutor.swift; sourceTree = "<group>"; };
 		5F7EE4301FBA47DF00FCD1C7 /* RoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
 		5F7EE4321FBA4A7600FCD1C7 /* RegistrationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationController.swift; sourceTree = "<group>"; };
 		5F7EE4341FBA5DB300FCD1C7 /* UserCompletionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCompletionController.swift; sourceTree = "<group>"; };
-		5FBB0E521F9269FC0077A877 /* grasp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = grasp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5FBB0E521F9269FC0077A877 /* Grasp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Grasp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5FBB0E551F9269FC0077A877 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5FBB0E5A1F9269FC0077A877 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5FBB0E5C1F9269FC0077A877 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -77,6 +89,8 @@
 				5F7EE4321FBA4A7600FCD1C7 /* RegistrationController.swift */,
 				5F7EE4341FBA5DB300FCD1C7 /* UserCompletionController.swift */,
 				5FE4D6841FBAA1EE005D3ECA /* MainTabBarController.swift */,
+				5F25D7A71FBCCC8E00A77415 /* TutorSearchViewController.swift */,
+				5F25D7AF1FBD502B00A77415 /* TutorCourseSelectionViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -86,6 +100,9 @@
 			children = (
 				5FBB0E6B1F92714D0077A877 /* TutorCell.swift */,
 				5F7EE4301FBA47DF00FCD1C7 /* RoundButton.swift */,
+				5F25D7A91FBCD60C00A77415 /* TutorResultCell.swift */,
+				5F25D7AD1FBD20A100A77415 /* CourseCell.swift */,
+				5F25D7B11FBD5D6600A77415 /* CourseTutorCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -95,6 +112,7 @@
 			children = (
 				5F3C5BC91F94251F004E7114 /* Tutor.swift */,
 				5FE4D6821FBA9975005D3ECA /* User.swift */,
+				5F25D7AB1FBCF52800A77415 /* Course.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -121,7 +139,7 @@
 		5FBB0E531F9269FC0077A877 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				5FBB0E521F9269FC0077A877 /* grasp.app */,
+				5FBB0E521F9269FC0077A877 /* Grasp.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -179,7 +197,7 @@
 			);
 			name = grasp;
 			productName = grasp;
-			productReference = 5FBB0E521F9269FC0077A877 /* grasp.app */;
+			productReference = 5FBB0E521F9269FC0077A877 /* Grasp.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -292,19 +310,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5F25D7AC1FBCF52800A77415 /* Course.swift in Sources */,
 				5F3C5BC81F9423ED004E7114 /* APIManager.swift in Sources */,
 				5F3C5BCA1F94251F004E7114 /* Tutor.swift in Sources */,
 				5FE4D6851FBAA1EE005D3ECA /* MainTabBarController.swift in Sources */,
 				5F7EE4351FBA5DB300FCD1C7 /* UserCompletionController.swift in Sources */,
 				5FBB0E6C1F92714D0077A877 /* TutorCell.swift in Sources */,
+				5F25D7B21FBD5D6600A77415 /* CourseTutorCell.swift in Sources */,
 				5FE4D6811FBA94DA005D3ECA /* KeyChainManager.swift in Sources */,
 				5FFE5F441F929F1300BCB2B5 /* UserProfileViewController.swift in Sources */,
 				5FE4D6831FBA9975005D3ECA /* User.swift in Sources */,
 				5FBB0E681F926ECE0077A877 /* InitialScreenViewController.swift in Sources */,
+				5F25D7AA1FBCD60C00A77415 /* TutorResultCell.swift in Sources */,
+				5F25D7B01FBD502B00A77415 /* TutorCourseSelectionViewController.swift in Sources */,
 				5FBB0E6A1F926FFF0077A877 /* TutorsViewController.swift in Sources */,
 				5F7EE4331FBA4A7600FCD1C7 /* RegistrationController.swift in Sources */,
 				5F7EE4311FBA47DF00FCD1C7 /* RoundButton.swift in Sources */,
+				5F25D7AE1FBD20A100A77415 /* CourseCell.swift in Sources */,
 				5FFE5F421F92949700BCB2B5 /* TutorProfileViewController.swift in Sources */,
+				5F25D7A81FBCCC8E00A77415 /* TutorSearchViewController.swift in Sources */,
 				5F3C5BC61F9420F0004E7114 /* UserCreationViewController.swift in Sources */,
 				5FBB0E561F9269FC0077A877 /* AppDelegate.swift in Sources */,
 			);
@@ -447,11 +471,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 678B5R7V3K;
 				INFOPLIST_FILE = grasp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = luminouslabs.grasp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Grasp;
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -463,11 +488,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 678B5R7V3K;
 				INFOPLIST_FILE = grasp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = luminouslabs.grasp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Grasp;
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

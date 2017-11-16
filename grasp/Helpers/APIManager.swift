@@ -13,9 +13,6 @@ class APIManager {
     static let sharedInstance = APIManager()
     let baseURL = "https://grasp-uwaterloo.herokuapp.com"
     
-    //https://grasp-uwaterloo.herokuapp.com/public/user/email/j2dodd@uwaterloo.ca
-    //https://grasp-uwaterloo.herokuapp.com/user/signup
-    
     func isEmailAddressInUse (email_address: String, success: @escaping (_ in_use: Bool) -> Void) {
         
         let requestURL: String = baseURL + "/public/user/email/" + email_address
@@ -41,8 +38,9 @@ class APIManager {
             response in
             if let json = response.result.value as? [String: Any] {
                 success(json)
+            } else {
+                success([String : Any]())
             }
-            success([String : Any]())
         }
         
     }
@@ -109,4 +107,96 @@ class APIManager {
             }
         }
     }
+    
+    func searchTutors (query: String, success: @escaping (_ tutors: [Tutor]) -> Void) {
+        
+        let requestURL: String = baseURL + "/search"
+        let apiToken = KeyChainManager.sharedInstance.retrieveValueFor("token")
+        let headers: HTTPHeaders = [
+            "API-TOKEN": apiToken,
+            "Content-Type": "application/json"
+        ]
+        let parameters = [
+            "query": query
+        ]
+        
+        Alamofire.request(requestURL, method: .get, parameters: parameters, headers: headers).responseJSON { response in
+            
+            if let json = response.result.value as? NSDictionary {
+                if let tutorsJSON = json["users"] as? NSArray {
+                    var listOfTutors = [Tutor]()
+                    for case let tutorJson as Dictionary<String, Any> in tutorsJSON {
+                        let tutor = Tutor(jsonDict: tutorJson)
+                        listOfTutors.append(tutor)
+                    }
+                    success(listOfTutors)
+                }
+            }
+        }
+    }
+    
+    func updateUserInfo(updated_info: [String: Any], success: @escaping (_ user_data: [String: Any]) -> Void) {
+        
+        let requestURL: String = baseURL + "/user/" + User.sharedInstance.id
+        let apiToken = KeyChainManager.sharedInstance.retrieveValueFor("token")
+        let headers: HTTPHeaders = [
+            "API-TOKEN": apiToken,
+            "Content-Type": "application/json"
+        ]
+        
+        Alamofire.request(requestURL, method: .post, parameters: updated_info, encoding: JSONEncoding.default, headers: headers).responseJSON {
+            response in
+            if let json = response.result.value as? [String: Any] {
+                success(json)
+            } else {
+                success([String : Any]())
+            }
+        }
+    }
+    
+    func getCourseInfo(course_code: String, success: @escaping (_ success: Bool, _ course_data: [String: Any]) -> Void) {
+    
+        let requestURL: String = baseURL + "/courseCatalog/code/" + course_code
+        let apiToken = KeyChainManager.sharedInstance.retrieveValueFor("token")
+        let headers: HTTPHeaders = [
+            "API-TOKEN": apiToken,
+            "Content-Type": "application/json"
+        ]
+        
+        Alamofire.request(requestURL, headers: headers).responseJSON { response in
+            if let json = response.result.value as? NSDictionary {
+                if let code = json["code"] {
+                    let course_data : [String: Any] = [
+                        "code": code,
+                        "courseName": json["courseName"],
+                        "description": json["description"]
+                    ]
+                    success(true, course_data)
+                } else {
+                    success(false, [String: Any]())
+                }
+            }
+        }
+    }
+    
+    func convertToTutor(tutoringInfo: [String: Any], success: @escaping (_ user_data: [String: Any]) -> Void) {
+        
+        let requestURL: String = baseURL + "/tutor"
+        let apiToken = KeyChainManager.sharedInstance.retrieveValueFor("token")
+        let headers: HTTPHeaders = [
+            "API-TOKEN": apiToken,
+            "Content-Type": "application/json"
+        ]
+        
+        Alamofire.request(requestURL, method: .post, parameters: tutoringInfo, encoding: JSONEncoding.default, headers: headers).responseJSON {
+            response in
+            if let json = response.result.value as? [String: Any] {
+                success(json)
+            } else {
+                success([String : Any]())
+            }
+        }
+        
+    }
+    
 }

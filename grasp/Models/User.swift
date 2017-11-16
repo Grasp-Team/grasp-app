@@ -22,7 +22,9 @@ class User {
     var faculty : String
     var userType : String
     var userRole : String
-    var tutors : NSArray
+    var courses : [Course]
+    
+    //userType: "TUTOR"
     
     private init () {
         id = ""
@@ -34,7 +36,7 @@ class User {
         faculty = ""
         userType = ""
         userRole = ""
-        tutors = NSArray()
+        courses = [Course]()
         
         login_email = ""
     }
@@ -49,6 +51,36 @@ class User {
         faculty = user_data["faculty"] as? String ?? ""
         userType = user_data["userType"] as? String ?? ""
         userRole = user_data["userRole"] as? String ?? ""
-        tutors = NSArray()
+        
+        self.courses = [Course]()
+        if let courses = user_data["tutors"] as? NSArray {
+            for case let course as NSDictionary in courses {
+                if let courseCatalogDict = course["courseCatalog"] as? [String: Any] {
+                    let course = Course(jsonDict: courseCatalogDict)
+                    self.courses.append(course)
+                }
+            }
+        }
+    }
+    
+    func isTutor() -> Bool {
+        if userType == "TUTOR" {
+            return true
+        } else {
+            return false
+        }
+    }
+    
+    func alreadyTutoring(course: Course) -> Bool {
+        for course_tutoring in courses {
+            if course_tutoring.code == course.code {
+                return true
+            }
+        }
+        return false
+    }
+    
+    func addCourse(course: Course) {
+        courses.append(course)
     }
 }
