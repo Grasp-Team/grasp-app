@@ -117,7 +117,8 @@ class APIManager {
             "Content-Type": "application/json"
         ]
         let parameters = [
-            "query": query
+            "query": query,
+            "exclude": User.sharedInstance.id
         ]
         
         Alamofire.request(requestURL, method: .get, parameters: parameters, headers: headers).responseJSON { response in
@@ -196,7 +197,37 @@ class APIManager {
                 success([String : Any]())
             }
         }
+    }
+    
+    func updateTutorCourses(tutoringInfo: [String: Any], success: @escaping (_ user_data: [String: Any]) -> Void) {
+    
+        let requestURL: String = baseURL + "/tutor/course/" + User.sharedInstance.id
+        let apiToken = KeyChainManager.sharedInstance.retrieveValueFor("token")
+        let headers: HTTPHeaders = [
+            "API-TOKEN": apiToken,
+            "Content-Type": "application/json"
+        ]
         
+        Alamofire.request(requestURL, method: .post, parameters: tutoringInfo, encoding: JSONEncoding.default, headers: headers).responseJSON {
+            response in
+            if let json = response.result.value as? [String: Any] {
+                success(json)
+            } else {
+                success([String : Any]())
+            }
+        }
+    }
+    
+    func unregisterAsTutor(success: @escaping (_ user_data: [String: Any]) -> Void) {
+    
+        let requestURL: String = baseURL + "/tutor/" + User.sharedInstance.id
+        let apiToken = KeyChainManager.sharedInstance.retrieveValueFor("token")
+        let headers: HTTPHeaders = [
+            "API-TOKEN": apiToken,
+            "Content-Type": "application/json"
+        ]
+        
+        Alamofire.request(requestURL, method: .delete, headers: headers)
     }
     
 }

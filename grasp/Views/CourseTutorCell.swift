@@ -8,8 +8,22 @@
 
 import UIKit
 
+protocol CourseTutorCellDelegate {
+    func courseRemoved()
+}
+
 class CourseTutorCell: UITableViewCell {
     
     @IBOutlet weak var courseLabel: UILabel!
     @IBOutlet weak var deleteButton: UIButton!
+    
+    var delegate : CourseTutorCellDelegate?
+    var courseCode: String = ""
+    
+    @IBAction func removeCourse(_ sender: UIButton) {
+        if let delegate = delegate {
+            User.sharedInstance.removeCourse(courseCode: courseCode)
+            delegate.courseRemoved()
+        }
+    }
 }

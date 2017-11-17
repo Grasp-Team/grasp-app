@@ -32,13 +32,14 @@ class UserProfileViewController: UIViewController {
             action: #selector(UserProfileViewController.dismissKeyboard))
         view.addGestureRecognizer(tap)
         
+        initProfileInfo()
         tutorSwitch.isOn = User.sharedInstance.isTutor()
         selectCoursesButton.isEnabled = tutorSwitch.isOn
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        initProfileInfo()
+        //initProfileInfo()
     }
 
     override func didReceiveMemoryWarning() {
@@ -68,6 +69,29 @@ class UserProfileViewController: UIViewController {
             user_data in
             User.sharedInstance.updateUser(user_data: user_data)
         }
+    }
+    
+    func updateTutorCourses() {
+        var courseCodes = [String]()
+        for course in User.sharedInstance.courses {
+            courseCodes.append(course.code)
+        }
+        
+        let tutoringInfo: [String: Any] = [
+            "courseCodes": courseCodes
+        ]
+        
+        APIManager.sharedInstance.updateTutorCourses(tutoringInfo: tutoringInfo) {
+            user_data in
+            User.sharedInstance.updateUserCourses(user_data: user_data)
+        }
+    }
+    
+    func unregisterAsTutor() {
+        APIManager.sharedInstance.unregisterAsTutor {
+            _ in
+        }
+        User.sharedInstance.unregisterAsTutor()
     }
     
     @objc func dismissKeyboard() {
@@ -108,9 +132,17 @@ class UserProfileViewController: UIViewController {
         
         APIManager.sharedInstance.updateUserInfo(updated_info: updated_info) {
             user_data in
-            User.sharedInstance.updateUser(user_data: user_data)
+            User.sharedInstance.updateUserExceptCourses(user_data: user_data)
             if (self.tutorSwitch.isOn) {
-                self.convertToTutor()
+                if (User.sharedInstance.isTutor()) {
+                    self.updateTutorCourses()
+                } else {
+                    self.convertToTutor()
+                }
+            } else {
+                if (User.sharedInstance.isTutor()) {
+                    self.unregisterAsTutor()
+                }
             }
         }
     }

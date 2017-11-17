@@ -54,7 +54,7 @@ class TutorCourseSelectionViewController: UIViewController {
     }
 }
 
-extension TutorCourseSelectionViewController: UITableViewDelegate, UITableViewDataSource {
+extension TutorCourseSelectionViewController: UITableViewDelegate, UITableViewDataSource, CourseTutorCellDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return User.sharedInstance.courses.count
     }
@@ -64,8 +64,13 @@ extension TutorCourseSelectionViewController: UITableViewDelegate, UITableViewDa
         
         let course : Course = User.sharedInstance.courses[indexPath.row]
         cell.courseLabel.text = course.code + ": " + course.course_name
+        cell.courseCode = course.code
+        cell.delegate = self
         return cell
     }
     
+    func courseRemoved() {
+        coursesTableView.reloadData()
+    }
     
 }

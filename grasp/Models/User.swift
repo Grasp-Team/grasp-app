@@ -63,12 +63,40 @@ class User {
         }
     }
     
+    func updateUserExceptCourses(user_data : [String: Any]) {
+        id = user_data["id"] as? String ?? ""
+        first_name = user_data["firstName"] as? String ?? ""
+        last_name = user_data["lastName"] as? String ?? ""
+        email = user_data["email"] as? String ?? ""
+        year = user_data["year"] as? Int ?? -1
+        program = user_data["program"] as? String ?? ""
+        faculty = user_data["faculty"] as? String ?? ""
+        userType = user_data["userType"] as? String ?? ""
+        userRole = user_data["userRole"] as? String ?? ""
+    }
+    
+    func updateUserCourses(user_data: [String: Any]) {
+        self.courses = [Course]()
+        if let courses = user_data["tutors"] as? NSArray {
+            for case let course as NSDictionary in courses {
+                if let courseCatalogDict = course["courseCatalog"] as? [String: Any] {
+                    let course = Course(jsonDict: courseCatalogDict)
+                    self.courses.append(course)
+                }
+            }
+        }
+    }
+    
     func isTutor() -> Bool {
         if userType == "TUTOR" {
             return true
         } else {
             return false
         }
+    }
+    
+    func unregisterAsTutor() {
+        userType = "STANDARD"
     }
     
     func alreadyTutoring(course: Course) -> Bool {
@@ -82,5 +110,13 @@ class User {
     
     func addCourse(course: Course) {
         courses.append(course)
+    }
+    
+    func removeCourse(courseCode: String) {
+        for (index, course_tutoring) in courses.enumerated() {
+            if course_tutoring.code == courseCode {
+                self.courses.remove(at: index)
+            }
+        }
     }
 }
