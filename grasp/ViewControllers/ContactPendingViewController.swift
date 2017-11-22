@@ -70,6 +70,12 @@ extension ContactPendingViewController: UITableViewDelegate, UITableViewDataSour
             cell.relationshipId = relationships[indexPath.row].relationshipId
             cell.delegate = self
             
+            if let url = URL(string: user.imageUrl) {
+                cell.profileImageView.layer.cornerRadius = 30
+                cell.profileImageView.layer.masksToBounds = true
+                cell.profileImageView.af_setImage(withURL: url)
+            }
+            
             return cell
         }
     }

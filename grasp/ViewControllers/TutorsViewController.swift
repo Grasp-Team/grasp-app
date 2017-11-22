@@ -8,6 +8,7 @@
 
 import UIKit
 import Alamofire
+import AlamofireImage
 
 class TutorsViewController: UIViewController {
 
@@ -71,6 +72,12 @@ extension TutorsViewController: UITableViewDelegate, UITableViewDataSource {
         
         cell.nameLabel.text = tutor.firstName + " " + tutor.lastName
         cell.programLabel.text = tutor.program + " (Year " + String(tutor.year) + ")"
+        
+        if let url = URL(string: tutor.imageUrl) {
+            cell.profileImageView.layer.cornerRadius = 30
+            cell.profileImageView.layer.masksToBounds = true
+            cell.profileImageView.af_setImage(withURL: url)
+        }
         
         return cell
         

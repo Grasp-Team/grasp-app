@@ -9,6 +9,7 @@ target 'grasp' do
 	pod 'KeychainSwift', '~> 10.0'
 	pod 'Alamofire', '~> 4.5'
 	pod 'XLPagerTabStrip', '~> 8.0'
+	pod 'AlamofireImage', '~> 3.3'
 
   # Pods for grasp
 

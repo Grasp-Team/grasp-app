@@ -63,7 +63,9 @@ class UserCompletionController: UIViewController {
         if (first_name.isEmpty || last_name.isEmpty || program.isEmpty) {
             errorLabel.text = "Fill in Completely"
             errorLabel.isHidden = false
-        } else{
+        } else {
+            LoadingIndicatorView.show()
+            
             errorLabel.isHidden = true
             APIManager.sharedInstance.registerUser(user_info: user_info) {
                 user_data in
@@ -73,6 +75,9 @@ class UserCompletionController: UIViewController {
                         KeyChainManager.sharedInstance.storeValueFor("token", value: token)
                         User.sharedInstance.updateUser(user_data: user_data)
                         User.sharedInstance.login_email = email_address
+                        
+                        LoadingIndicatorView.hide()
+                        
                         self.appDelegate.openMainFeed()
                     }
                 }

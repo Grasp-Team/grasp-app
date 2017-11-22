@@ -72,7 +72,7 @@ class TutorProfileViewController: UIViewController {
                 case Constants.RelationshipStatus.pending.rawValue:
                     self.emailLabel.text = "Request to Connect"
                     self.connectButton.titleLabel?.textColor = UIColor.darkGray
-                    self.connectButton.titleLabel?.text = "Requested"
+                    self.connectButton.titleLabel?.text = "Pending"
                     self.connectButton.isUserInteractionEnabled = false
                     self.connectButton.isHidden = false
                     break

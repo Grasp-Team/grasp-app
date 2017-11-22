@@ -34,6 +34,7 @@
 		5FBB0E681F926ECE0077A877 /* InitialScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FBB0E671F926ECE0077A877 /* InitialScreenViewController.swift */; };
 		5FBB0E6A1F926FFF0077A877 /* TutorsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FBB0E691F926FFF0077A877 /* TutorsViewController.swift */; };
 		5FBB0E6C1F92714D0077A877 /* TutorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FBB0E6B1F92714D0077A877 /* TutorCell.swift */; };
+		5FD671B41FC52A4E005FEB5B /* LoadingIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FD671B31FC52A4E005FEB5B /* LoadingIndicatorView.swift */; };
 		5FE4D6811FBA94DA005D3ECA /* KeyChainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FE4D6801FBA94DA005D3ECA /* KeyChainManager.swift */; };
 		5FE4D6831FBA9975005D3ECA /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FE4D6821FBA9975005D3ECA /* User.swift */; };
 		5FE4D6851FBAA1EE005D3ECA /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FE4D6841FBAA1EE005D3ECA /* MainTabBarController.swift */; };
@@ -71,6 +72,7 @@
 		5FBB0E671F926ECE0077A877 /* InitialScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialScreenViewController.swift; sourceTree = "<group>"; };
 		5FBB0E691F926FFF0077A877 /* TutorsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorsViewController.swift; sourceTree = "<group>"; };
 		5FBB0E6B1F92714D0077A877 /* TutorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorCell.swift; sourceTree = "<group>"; };
+		5FD671B31FC52A4E005FEB5B /* LoadingIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingIndicatorView.swift; sourceTree = "<group>"; };
 		5FE4D6801FBA94DA005D3ECA /* KeyChainManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyChainManager.swift; sourceTree = "<group>"; };
 		5FE4D6821FBA9975005D3ECA /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		5FE4D6841FBAA1EE005D3ECA /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
@@ -122,6 +124,7 @@
 				5F25D7B11FBD5D6600A77415 /* CourseTutorCell.swift */,
 				5FA83DE11FC4DC7A0091BD51 /* PendingUserCell.swift */,
 				5FA83DE31FC4E9210091BD51 /* AcceptedUserCell.swift */,
+				5FD671B31FC52A4E005FEB5B /* LoadingIndicatorView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -295,6 +298,7 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-grasp/Pods-grasp-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/KeychainSwift/KeychainSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/XLPagerTabStrip/XLPagerTabStrip.framework",
@@ -302,6 +306,7 @@
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KeychainSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/XLPagerTabStrip.framework",
@@ -338,6 +343,7 @@
 				5F3C5BC81F9423ED004E7114 /* APIManager.swift in Sources */,
 				5F3C5BCA1F94251F004E7114 /* Tutor.swift in Sources */,
 				5FE4D6851FBAA1EE005D3ECA /* MainTabBarController.swift in Sources */,
+				5FD671B41FC52A4E005FEB5B /* LoadingIndicatorView.swift in Sources */,
 				5F7EE4351FBA5DB300FCD1C7 /* UserCompletionController.swift in Sources */,
 				5FBB0E6C1F92714D0077A877 /* TutorCell.swift in Sources */,
 				5FA83DE21FC4DC7A0091BD51 /* PendingUserCell.swift in Sources */,

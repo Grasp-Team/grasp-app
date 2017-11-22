@@ -49,9 +49,26 @@ class RegistrationController: UIViewController {
             "email_address" : email_address,
             "password" : password,
         ]
+        
+        if (!email_address.contains("@")) {
+            self.errorEmailLabel.text = "Missing \"@\" in email address"
+            self.errorEmailLabel.isHidden = false
+            return
+        } else if (password.count < 5) {
+            self.errorEmailLabel.text = "Passwords must be 5 characters or more"
+            self.errorEmailLabel.isHidden = false
+            return
+        }
+        
+        LoadingIndicatorView.show()
+        
         APIManager.sharedInstance.isEmailAddressInUse(email_address: email_address) {
             in_use in
+            
+            LoadingIndicatorView.hide()
+            
             if (in_use) {
+                self.errorEmailLabel.text = "Email Address Taken"
                 self.errorEmailLabel.isHidden = false
             } else {
                 self.errorEmailLabel.isHidden = true

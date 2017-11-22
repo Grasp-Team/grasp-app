@@ -26,8 +26,8 @@ class InitialScreenViewController: UIViewController {
     }
 
     @IBAction func login() {
-        
-        //show loader
+
+        LoadingIndicatorView.show()
         
         let email_address = emailAddressTextField.text ?? ""
         let password = passwordTextField.text ?? ""
@@ -39,9 +39,11 @@ class InitialScreenViewController: UIViewController {
                 
                 KeyChainManager.sharedInstance.storeValueFor("token", value: token)
                 User.sharedInstance.login_email = email_address
+                LoadingIndicatorView.hide()
                 self.appDelegate.openMainFeed()
                 
             } else {
+                LoadingIndicatorView.hide()
                 self.errorMessageLabel.isHidden = false
             }
         }
