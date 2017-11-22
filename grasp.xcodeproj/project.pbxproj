@@ -20,6 +20,13 @@
 		5F7EE4311FBA47DF00FCD1C7 /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F7EE4301FBA47DF00FCD1C7 /* RoundButton.swift */; };
 		5F7EE4331FBA4A7600FCD1C7 /* RegistrationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F7EE4321FBA4A7600FCD1C7 /* RegistrationController.swift */; };
 		5F7EE4351FBA5DB300FCD1C7 /* UserCompletionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F7EE4341FBA5DB300FCD1C7 /* UserCompletionController.swift */; };
+		5F9CF2161FC2A62600BBDFFE /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F9CF2151FC2A62600BBDFFE /* Constants.swift */; };
+		5F9CF2181FC4A2F700BBDFFE /* ContactPagerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F9CF2171FC4A2F700BBDFFE /* ContactPagerViewController.swift */; };
+		5F9CF21A1FC4A61200BBDFFE /* ContactAcceptedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F9CF2191FC4A61200BBDFFE /* ContactAcceptedViewController.swift */; };
+		5F9CF21C1FC4A61E00BBDFFE /* ContactPendingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F9CF21B1FC4A61E00BBDFFE /* ContactPendingViewController.swift */; };
+		5FA83DE01FC4BA810091BD51 /* Relationship.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA83DDF1FC4BA810091BD51 /* Relationship.swift */; };
+		5FA83DE21FC4DC7A0091BD51 /* PendingUserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA83DE11FC4DC7A0091BD51 /* PendingUserCell.swift */; };
+		5FA83DE41FC4E9210091BD51 /* AcceptedUserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA83DE31FC4E9210091BD51 /* AcceptedUserCell.swift */; };
 		5FBB0E561F9269FC0077A877 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FBB0E551F9269FC0077A877 /* AppDelegate.swift */; };
 		5FBB0E5B1F9269FC0077A877 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5FBB0E591F9269FC0077A877 /* Main.storyboard */; };
 		5FBB0E5D1F9269FC0077A877 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5FBB0E5C1F9269FC0077A877 /* Assets.xcassets */; };
@@ -48,6 +55,13 @@
 		5F7EE4301FBA47DF00FCD1C7 /* RoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
 		5F7EE4321FBA4A7600FCD1C7 /* RegistrationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationController.swift; sourceTree = "<group>"; };
 		5F7EE4341FBA5DB300FCD1C7 /* UserCompletionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCompletionController.swift; sourceTree = "<group>"; };
+		5F9CF2151FC2A62600BBDFFE /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		5F9CF2171FC4A2F700BBDFFE /* ContactPagerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactPagerViewController.swift; sourceTree = "<group>"; };
+		5F9CF2191FC4A61200BBDFFE /* ContactAcceptedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactAcceptedViewController.swift; sourceTree = "<group>"; };
+		5F9CF21B1FC4A61E00BBDFFE /* ContactPendingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactPendingViewController.swift; sourceTree = "<group>"; };
+		5FA83DDF1FC4BA810091BD51 /* Relationship.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Relationship.swift; sourceTree = "<group>"; };
+		5FA83DE11FC4DC7A0091BD51 /* PendingUserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PendingUserCell.swift; sourceTree = "<group>"; };
+		5FA83DE31FC4E9210091BD51 /* AcceptedUserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcceptedUserCell.swift; sourceTree = "<group>"; };
 		5FBB0E521F9269FC0077A877 /* Grasp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Grasp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5FBB0E551F9269FC0077A877 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5FBB0E5A1F9269FC0077A877 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -91,6 +105,9 @@
 				5FE4D6841FBAA1EE005D3ECA /* MainTabBarController.swift */,
 				5F25D7A71FBCCC8E00A77415 /* TutorSearchViewController.swift */,
 				5F25D7AF1FBD502B00A77415 /* TutorCourseSelectionViewController.swift */,
+				5F9CF2171FC4A2F700BBDFFE /* ContactPagerViewController.swift */,
+				5F9CF2191FC4A61200BBDFFE /* ContactAcceptedViewController.swift */,
+				5F9CF21B1FC4A61E00BBDFFE /* ContactPendingViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -103,6 +120,8 @@
 				5F25D7A91FBCD60C00A77415 /* TutorResultCell.swift */,
 				5F25D7AD1FBD20A100A77415 /* CourseCell.swift */,
 				5F25D7B11FBD5D6600A77415 /* CourseTutorCell.swift */,
+				5FA83DE11FC4DC7A0091BD51 /* PendingUserCell.swift */,
+				5FA83DE31FC4E9210091BD51 /* AcceptedUserCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -113,6 +132,7 @@
 				5F3C5BC91F94251F004E7114 /* Tutor.swift */,
 				5FE4D6821FBA9975005D3ECA /* User.swift */,
 				5F25D7AB1FBCF52800A77415 /* Course.swift */,
+				5FA83DDF1FC4BA810091BD51 /* Relationship.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -122,6 +142,7 @@
 			children = (
 				5F3C5BC71F9423ED004E7114 /* APIManager.swift */,
 				5FE4D6801FBA94DA005D3ECA /* KeyChainManager.swift */,
+				5F9CF2151FC2A62600BBDFFE /* Constants.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -276,12 +297,14 @@
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/KeychainSwift/KeychainSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/XLPagerTabStrip/XLPagerTabStrip.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KeychainSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/XLPagerTabStrip.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -311,21 +334,28 @@
 			buildActionMask = 2147483647;
 			files = (
 				5F25D7AC1FBCF52800A77415 /* Course.swift in Sources */,
+				5F9CF2161FC2A62600BBDFFE /* Constants.swift in Sources */,
 				5F3C5BC81F9423ED004E7114 /* APIManager.swift in Sources */,
 				5F3C5BCA1F94251F004E7114 /* Tutor.swift in Sources */,
 				5FE4D6851FBAA1EE005D3ECA /* MainTabBarController.swift in Sources */,
 				5F7EE4351FBA5DB300FCD1C7 /* UserCompletionController.swift in Sources */,
 				5FBB0E6C1F92714D0077A877 /* TutorCell.swift in Sources */,
+				5FA83DE21FC4DC7A0091BD51 /* PendingUserCell.swift in Sources */,
 				5F25D7B21FBD5D6600A77415 /* CourseTutorCell.swift in Sources */,
+				5F9CF2181FC4A2F700BBDFFE /* ContactPagerViewController.swift in Sources */,
+				5FA83DE01FC4BA810091BD51 /* Relationship.swift in Sources */,
 				5FE4D6811FBA94DA005D3ECA /* KeyChainManager.swift in Sources */,
 				5FFE5F441F929F1300BCB2B5 /* UserProfileViewController.swift in Sources */,
 				5FE4D6831FBA9975005D3ECA /* User.swift in Sources */,
+				5F9CF21C1FC4A61E00BBDFFE /* ContactPendingViewController.swift in Sources */,
 				5FBB0E681F926ECE0077A877 /* InitialScreenViewController.swift in Sources */,
 				5F25D7AA1FBCD60C00A77415 /* TutorResultCell.swift in Sources */,
+				5FA83DE41FC4E9210091BD51 /* AcceptedUserCell.swift in Sources */,
 				5F25D7B01FBD502B00A77415 /* TutorCourseSelectionViewController.swift in Sources */,
 				5FBB0E6A1F926FFF0077A877 /* TutorsViewController.swift in Sources */,
 				5F7EE4331FBA4A7600FCD1C7 /* RegistrationController.swift in Sources */,
 				5F7EE4311FBA47DF00FCD1C7 /* RoundButton.swift in Sources */,
+				5F9CF21A1FC4A61200BBDFFE /* ContactAcceptedViewController.swift in Sources */,
 				5F25D7AE1FBD20A100A77415 /* CourseCell.swift in Sources */,
 				5FFE5F421F92949700BCB2B5 /* TutorProfileViewController.swift in Sources */,
 				5F25D7A81FBCCC8E00A77415 /* TutorSearchViewController.swift in Sources */,

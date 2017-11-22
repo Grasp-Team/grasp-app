@@ -7,6 +7,7 @@ target 'grasp' do
 	pod 'IQKeyboardManagerSwift'
 	pod 'KeychainSwift', '~> 10.0'
 	pod 'Alamofire', '~> 4.5'
+	pod 'XLPagerTabStrip', '~> 8.0'
 
   # Pods for grasp
 

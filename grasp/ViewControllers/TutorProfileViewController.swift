@@ -22,7 +22,7 @@ class TutorProfileViewController: UIViewController {
         if let tutor = self.tutor {
             self.navigationItem.title = tutor.firstName + " " + tutor.lastName
             self.userInfoLabel.text = tutor.program + " Year \(tutor.year)"
-            self.emailLabel.text = "Request to Connect"
+            checkRelationship(tutor: tutor)
             self.coursesTableView.delegate = self
             self.coursesTableView.dataSource = self
         }
@@ -30,6 +30,62 @@ class TutorProfileViewController: UIViewController {
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+    }
+    
+    func checkRelationship(tutor: Tutor) {
+        APIManager.sharedInstance.checkTutorRelationship(tutorId: tutor.id) {
+            relationship in
+            switch (relationship) {
+            case Constants.RelationshipStatus.accepted.rawValue:
+                self.emailLabel.text = tutor.email
+                self.connectButton.isHidden = true
+                self.connectButton.isUserInteractionEnabled = false
+                break
+            case Constants.RelationshipStatus.pending.rawValue:
+                self.emailLabel.text = "Request to Connect"
+                self.connectButton.titleLabel?.textColor = UIColor.darkGray
+                self.connectButton.titleLabel?.text = "Pending"
+                self.connectButton.isUserInteractionEnabled = false
+                self.connectButton.isHidden = false
+                break
+            default:
+                self.emailLabel.text = "Request to Connect"
+                self.connectButton.titleLabel?.textColor = .white
+                self.connectButton.titleLabel?.text = "Connect"
+                self.connectButton.isUserInteractionEnabled = true
+                self.connectButton.isHidden = false
+                break
+            }
+        }
+    }
+    
+    @IBAction func contactRequest(_ sender: UIButton) {
+        if let tutor = self.tutor {
+            APIManager.sharedInstance.initiateContactRequest(tutorId: tutor.id) {
+                relationship in
+                switch (relationship) {
+                case Constants.RelationshipStatus.accepted.rawValue:
+                    self.emailLabel.text = tutor.email
+                    self.connectButton.isHidden = true
+                    self.connectButton.isUserInteractionEnabled = false
+                    break
+                case Constants.RelationshipStatus.pending.rawValue:
+                    self.emailLabel.text = "Request to Connect"
+                    self.connectButton.titleLabel?.textColor = UIColor.darkGray
+                    self.connectButton.titleLabel?.text = "Requested"
+                    self.connectButton.isUserInteractionEnabled = false
+                    self.connectButton.isHidden = false
+                    break
+                default:
+                    self.emailLabel.text = "Request to Connect"
+                    self.connectButton.titleLabel?.textColor = .white
+                    self.connectButton.titleLabel?.text = "Connect"
+                    self.connectButton.isUserInteractionEnabled = true
+                    self.connectButton.isHidden = false
+                    break
+                }
+            }
+        }
     }
 
 }

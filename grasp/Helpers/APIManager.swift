@@ -230,4 +230,151 @@ class APIManager {
         Alamofire.request(requestURL, method: .delete, headers: headers)
     }
     
+    func initiateContactRequest(tutorId: String, success: @escaping (_ relationship: String) -> Void) {
+    
+        let requestURL: String = baseURL + "/relationship"
+        let apiToken = KeyChainManager.sharedInstance.retrieveValueFor("token")
+        let headers: HTTPHeaders = [
+            "API-TOKEN": apiToken,
+            "Content-Type": "application/json"
+        ]
+        
+        let parameters : [String: String] = [
+            "tutorId": tutorId,
+            "userId": User.sharedInstance.id,
+            "relationshipStatus": Constants.RelationshipStatus.pending.rawValue
+        ]
+        
+        Alamofire.request(requestURL, method: .post, parameters: parameters, encoding: JSONEncoding.default, headers: headers).responseJSON { response in
+            if let json = response.result.value as? NSDictionary {
+                let relationshipStatus = json["relationshipStatus"] as? String ?? ""
+                success(relationshipStatus)
+                return
+            }
+        }
+        
+    }
+    
+    func checkTutorRelationship(tutorId: String, success: @escaping (_ relationship: String) -> Void) {
+    
+        let requestURL: String = baseURL + "/relationship/status"
+        let apiToken = KeyChainManager.sharedInstance.retrieveValueFor("token")
+        let headers: HTTPHeaders = [
+            "API-TOKEN": apiToken,
+            "Content-Type": "application/json"
+        ]
+        
+        let parameters = [
+            "tutorId": tutorId,
+            "userId": User.sharedInstance.id
+        ]
+        
+        Alamofire.request(requestURL, method: .post, parameters: parameters, encoding: JSONEncoding.default, headers: headers).responseJSON { response in
+            if let statusCode = response.response?.statusCode {
+                if (statusCode == 404) {
+                    success("")
+                    return
+                }
+            }
+            if let json = response.result.value as? NSDictionary {
+                let relationshipStatus = json["relationshipStatus"] as? String ?? ""
+                success(relationshipStatus)
+                return
+            }
+        }
+    }
+    
+    func retrieveRelationshipsFor(status: String, success: @escaping (_ relationships: [Relationship]) -> Void) {
+        
+        let requestURL: String = baseURL + "/relationship/tutor/" + User.sharedInstance.id
+        let apiToken = KeyChainManager.sharedInstance.retrieveValueFor("token")
+        let headers: HTTPHeaders = [
+            "API-TOKEN": apiToken,
+            "Content-Type": "application/json"
+        ]
+        
+        Alamofire.request(requestURL, headers: headers).responseJSON { response in
+            if let json = response.result.value as? [String: Any] {
+                if let relationshipJSON = json["userRelationshipList"] as? NSArray {
+                    var relationships = [Relationship]()
+                    for case let relationship as [String: Any] in relationshipJSON {
+                        if relationship["relationshipStatus"] as? String == status {
+                            let relationshipModel = Relationship(jsonDict: relationship)
+                            relationships.append(relationshipModel)
+                        }
+                    }
+                    success(relationships)
+                }
+            }
+        }
+    }
+    
+    func retrieveUsersFromRelationships(relationships: [Relationship], success: @escaping (_ success: Bool, _ tutors: [Tutor]) -> Void) {
+    
+        var userIds = [String]()
+        for relationship in relationships {
+            userIds.append(relationship.userId)
+        }
+        
+        let requestURL: String = baseURL + "/user"
+        let apiToken = KeyChainManager.sharedInstance.retrieveValueFor("token")
+        let headers: HTTPHeaders = [
+            "API-TOKEN": apiToken,
+            "Content-Type": "application/json"
+        ]
+        
+        let parameters : [String: [String]] = [
+            "users": userIds
+        ]
+        
+        Alamofire.request(requestURL, method: .post, parameters: parameters, encoding: JSONEncoding.default, headers: headers).responseJSON { response in
+            if let json = response.result.value as? NSDictionary {
+                if let tutorsJSON = json["users"] as? NSArray {
+                    var listOfTutors = [Tutor]()
+                    for case let tutorJson as Dictionary<String, Any> in tutorsJSON {
+                        let tutor = Tutor(jsonDict: tutorJson)
+                        listOfTutors.append(tutor)
+                    }
+                    success(true, listOfTutors)
+                }
+            }
+        }
+    }
+    
+    func relationshipAccepted(relationshipId: Int, success: @escaping (_ success: Bool) -> Void) {
+    
+        let requestURL: String = baseURL + "/relationship/" + String(relationshipId)
+        let apiToken = KeyChainManager.sharedInstance.retrieveValueFor("token")
+        let headers: HTTPHeaders = [
+            "API-TOKEN": apiToken,
+            "Content-Type": "application/json"
+        ]
+        
+        let parameters : [String: String] = [
+            "relationshipStatus": Constants.RelationshipStatus.accepted.rawValue
+        ]
+        
+        Alamofire.request(requestURL, method: .post, parameters: parameters, encoding: JSONEncoding.default, headers: headers).responseJSON {
+            response in
+            if let _ = response.result.value {
+                success(true)
+            }
+        }
+    }
+    
+    func deleteRelationship(relationshipId: Int, success: @escaping (_ success: Bool) -> Void) {
+    
+        let requestURL: String = baseURL + "/relationship/" + String(relationshipId)
+        let apiToken = KeyChainManager.sharedInstance.retrieveValueFor("token")
+        let headers: HTTPHeaders = [
+            "API-TOKEN": apiToken,
+            "Content-Type": "application/json"
+        ]
+        
+        Alamofire.request(requestURL, method: .delete, headers: headers).responseJSON {
+            response in
+            success(true)
+        }
+    }
+    
 }

@@ -16,6 +16,7 @@ class Tutor {
     var email : String
     var program: String
     var year: Int
+    var imageUrl: String
     var courses: [Course]
     
     init(jsonDict: Dictionary<String, Any>) {
@@ -25,6 +26,7 @@ class Tutor {
         self.email = jsonDict["email"] as? String ?? "ERROR"
         self.program = jsonDict["program"] as? String ?? "ERROR"
         self.year = jsonDict["year"] as? Int ?? -1
+        self.imageUrl = jsonDict["imageUrl"] as? String ?? ""
         
         self.courses = [Course]()
         if let courses = jsonDict["tutors"] as? NSArray {
